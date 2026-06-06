@@ -5,10 +5,6 @@ using Estacionamento.Repositories;
 
 namespace Estacionamento.Controllers {
 
-    /*
-        Controla entrada e saída de veículos.
-    */
-
     public class TicketController {
 
         private readonly TicketRepository _ticketRepository =
@@ -22,10 +18,6 @@ namespace Estacionamento.Controllers {
 
             _veiculoRepository = veiculoRepository;
         }
-
-        /*
-            Registra a entrada de um veículo.
-        */
 
         public void RegistrarEntrada() {
 
@@ -82,10 +74,6 @@ namespace Estacionamento.Controllers {
                 $"Entrada: {ticket.HoraEntrada:dd/MM/yyyy HH:mm}"
             );
         }
-
-        /*
-            Registra a saída e processa o pagamento.
-        */
 
         public void RegistrarSaida() {
 
@@ -225,10 +213,6 @@ namespace Estacionamento.Controllers {
                 );
             }
         }
-
-        /*
-            Lista todos os tickets registrados.
-        */
 
         public void Listar() {
 
