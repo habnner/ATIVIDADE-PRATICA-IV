@@ -4,18 +4,10 @@ using Estacionamento.Repositories;
 
 namespace Estacionamento.Controllers {
 
-    /*
-        Controla o fluxo de cadastro de veículos.
-    */
-
     public class VeiculoController {
 
         private readonly VeiculoRepository _repository =
             new VeiculoRepository();
-
-        /*
-            Cadastra um novo veículo.
-        */
 
         public void Cadastrar() {
 
@@ -70,10 +62,6 @@ namespace Estacionamento.Controllers {
             );
         }
 
-        /*
-            Lista todos os veículos cadastrados.
-        */
-
         public void Listar() {
 
             var lista = _repository.Listar();
@@ -98,10 +86,6 @@ namespace Estacionamento.Controllers {
                 );
             }
         }
-
-        /*
-            Retorna o repository para uso em outros controllers.
-        */
 
         public VeiculoRepository ObterRepository() {
 
