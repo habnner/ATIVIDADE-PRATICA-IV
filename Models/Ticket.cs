@@ -2,10 +2,6 @@ using System;
 
 namespace Estacionamento.Models {
 
-    /*
-        Representa o ticket de entrada no estacionamento.
-    */
-
     public class Ticket {
 
         public int Id { get; set; }
@@ -22,11 +18,6 @@ namespace Estacionamento.Models {
 
         public Pagamento Pagamento { get; set; }
 
-        /*
-            Calcula as horas de permanência aplicando
-            as regras de cobrança do estacionamento.
-        */
-
         public decimal CalcularHoras() {
 
             if (HoraSaida == null) {
@@ -39,9 +30,6 @@ namespace Estacionamento.Models {
 
             double minutos = permanencia.TotalMinutes;
 
-            /*
-                Até 15 minutos: tolerância, não cobra.
-            */
 
             if (minutos <= 15) {
 
@@ -50,10 +38,6 @@ namespace Estacionamento.Models {
 
             double horas = permanencia.TotalHours;
 
-            /*
-                Frações acima de 30 minutos contam
-                como hora cheia.
-            */
 
             int horasInteiras = (int)horas;
 
