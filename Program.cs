@@ -3,9 +3,6 @@ using Estacionamento.Controllers;
 
 namespace Estacionamento {
 
-    /*
-        Ponto inicial do sistema de estacionamento.
-    */
 
     class Program {
 
