@@ -4,11 +4,6 @@ using Estacionamento.Models;
 
 namespace Estacionamento.Repositories {
 
-    /*
-        Responsável por armazenar e buscar tickets.
-        Os dados ficam em memória enquanto o programa roda.
-    */
-
     public class TicketRepository {
 
         private readonly List<Ticket> _tickets =
@@ -18,9 +13,6 @@ namespace Estacionamento.Repositories {
 
         private int _proximaVaga = 1;
 
-        /*
-            Gera e salva um novo ticket.
-        */
 
         public Ticket Inserir(Ticket ticket) {
 
@@ -33,18 +25,12 @@ namespace Estacionamento.Repositories {
             return ticket;
         }
 
-        /*
-            Retorna todos os tickets.
-        */
 
         public List<Ticket> Listar() {
 
             return _tickets;
         }
 
-        /*
-            Busca ticket em aberto pela placa do veículo.
-        */
 
         public Ticket BuscarAbertoPorPlaca(string placa) {
 
@@ -56,9 +42,6 @@ namespace Estacionamento.Repositories {
             );
         }
 
-        /*
-            Atualiza um ticket já existente.
-        */
 
         public void Atualizar(Ticket ticket) {
 
